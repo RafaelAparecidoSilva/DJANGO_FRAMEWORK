@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Djang 1 - Produto</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    <h1>Produto</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Preço</th>
+                <th>Estoque</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ prod.nome }}</td>
+                <td>{{ prod.preco }}</td>
+                <td>{{ prod.estoque }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br><br><br><br><br>
+    <p><button><a href="{% url 'index' %}">Voltar</a></button></p>
+</body>
+</html>
